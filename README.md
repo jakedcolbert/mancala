@@ -1,0 +1,2 @@
+# mancala
+Web Application Mancala
