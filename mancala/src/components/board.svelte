@@ -1,4 +1,7 @@
-<script>
+<script lang="ts">
+	// number of pits per side
+	export let pits: number = 6;
+  
 </script>
 
 <div class="box-border rounded-3xl bg-white w-32">
