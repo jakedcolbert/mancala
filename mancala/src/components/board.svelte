@@ -9,7 +9,9 @@
 	// number of init seeds per pit
 	export const seeds = 4;
 	const boardColor = '#A9E5BB';
-	const parseColor = '#FF0000';
+
+	let opponentBank: any;
+	let playerBank: any;
 	let thePits = Array.from(Array(cols), () => new Array(pits));
 
 	// Handles init click and recursive initializer
@@ -24,13 +26,19 @@
 	function recursiveSeeds(value: number, col: number, row: number) {
 		if (value > 0) {
 			if (row >= 6) {
+				if (col === 0) {
+					playerBank.increment();
+				}
+				if (col === 1) {
+					opponentBank.increment();
+				}
 				row = 0;
 				col = 1 - col;
+			} else {
+				thePits[col][row].increment();
+				row++;
 			}
-			thePits[col][row].increment();
-			console.log('seeds of ', col, row, 'set to', thePits[col][row].getSeeds());
 			value--;
-			row++;
 			setTimeout(() => recursiveSeeds(value, col, row), 1000);
 		}
 		return -1;
@@ -39,7 +47,7 @@
 
 <div class="box-border custom-shadow rounded-3xl" style:background-color={boardColor}>
 	<div class="p-2">
-		<Bank />
+		<Bank bind:this={opponentBank} />
 		<div class="grid" style:grid-template-columns="repeat({cols}, minmax(0, 1fr))">
 			<div class="flex flex-col">
 				{#each Array(pits) as _, row}
@@ -56,7 +64,7 @@
 				{/each}
 			</div>
 		</div>
-		<Bank />
+		<Bank bind:this={playerBank} />
 	</div>
 </div>
 

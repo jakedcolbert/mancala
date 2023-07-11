@@ -22,10 +22,10 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-	class="cursor-pointer m-2 w-12 h-12 rounded-full custom-shadow-inner"
+	class="flex items-center justify-center cursor-pointer m-2 w-12 h-12 rounded-full custom-shadow-inner"
 	style:background-color={pitColor}
 >
-	<div class="text-center">{seeds}</div>
+	<div class="font-mono align-middle text-black">{seeds}</div>
 </div>
 
 <style>

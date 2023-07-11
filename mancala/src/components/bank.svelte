@@ -1,11 +1,22 @@
 <script lang="ts">
-	const pitColor = '#FCF6B1';
+	let pitColor = '#FCF6B1';
+	let seeds = 0;
+
+	export function increment() {
+		seeds++;
+		pitColor = '#FF0000';
+		setTimeout(() => {
+			pitColor = '#FCF6B1';
+		}, 1000);
+	}
 </script>
 
 <div
-	class="cursor-pointer h-12 rounded-full custom-shadow-inner"
+	class="flex items-center justify-center cursor-pointer h-12 rounded-full custom-shadow-inner"
 	style:background-color={pitColor}
-/>
+>
+	<div class=" font-mono text-black">{seeds}</div>
+</div>
 
 <style>
 	.custom-shadow-inner {
