@@ -1,12 +1,16 @@
+<!--
+  @component board.svelte
+  A mancala board component with customizable theme, row count, and column count
+
+  Created by Jake Colbert on 07/02/2023
+-->
+
 <script lang="ts">
 	import Bank from './bank.svelte';
 	import Pit from './pit.svelte';
 
-	// number of pits per column
 	export const pits = 6;
-	// number of columns
 	export const cols = 2;
-	// number of init seeds per pit
 	export const seeds = 4;
 	const boardColor = '#A9E5BB';
 
@@ -25,7 +29,7 @@
 	// Recursively distibutes seeds
 	function recursiveSeeds(value: number, col: number, row: number) {
 		if (value > 0) {
-			if (row >= 6) {
+			if (row >= pits) {
 				if (col === 0) {
 					playerBank.increment();
 				}

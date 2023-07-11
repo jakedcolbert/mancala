@@ -1,6 +1,13 @@
+<!--
+  @component pit.svelte
+  A mancala pit component with customizable theme
+
+  Created by Jake Colbert on 07/02/2023
+-->
+
 <script lang="ts">
-	let pitColor = '#FCF6B1';
 	export let seeds: number;
+	let pitColor = '#FCF6B1';
 
 	export function getSeeds() {
 		return seeds;
