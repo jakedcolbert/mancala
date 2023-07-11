@@ -25,7 +25,7 @@
 	class="flex items-center justify-center cursor-pointer m-2 w-12 h-12 rounded-full custom-shadow-inner"
 	style:background-color={pitColor}
 >
-	<div class="font-mono align-middle text-black">{seeds}</div>
+	<div class="font-mono text-black">{seeds}</div>
 </div>
 
 <style>
