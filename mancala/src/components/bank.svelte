@@ -6,7 +6,7 @@
 -->
 
 <script lang="ts">
-	import settings from '../data/settings';
+	import { settings } from '../data/settings';
 	let seeds = 0;
 	let pitColor = '#FCF6B1';
 

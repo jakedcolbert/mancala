@@ -6,13 +6,13 @@
 -->
 
 <script lang="ts">
-	import settings from '../data/settings';
+	import { settings } from '../data/settings';
 	import Bank from './bank.svelte';
 	import Pit from './pit.svelte';
 
 	export const pits = 6;
 	export const cols = 2;
-	export const seeds = 4;
+	export const seeds = 13;
 	const boardColor = '#A9E5BB';
 
 	let opponentBank: any;
