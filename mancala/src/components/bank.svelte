@@ -6,6 +6,7 @@
 -->
 
 <script lang="ts">
+	import settings from '../data/settings';
 	let seeds = 0;
 	let pitColor = '#FCF6B1';
 
@@ -14,7 +15,7 @@
 		pitColor = '#FF0000';
 		setTimeout(() => {
 			pitColor = '#FCF6B1';
-		}, 1000);
+		}, settings.delay);
 	}
 </script>
 
