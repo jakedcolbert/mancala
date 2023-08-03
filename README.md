@@ -1,2 +1,3 @@
 # mancala
-Web Application Mancala
+
+A WIP Mancala web app written in Svlete, TypeScript, and Tailwind CSS
